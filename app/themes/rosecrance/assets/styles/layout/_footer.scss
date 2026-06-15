@@ -31,10 +31,6 @@
   text-decoration: none;
 }
 
-.footer-phone-number {
-  margin-top: 8px;
-}
-
 .footer-body-copy + .footer-phone-number {
   margin-top: 14px;
 }
@@ -51,7 +47,47 @@
 
 .footer {
   position: relative;
-  background-color: var(--color-white);
+  background-color: var(--color-footer-grey);
+  padding: 40px 0;
+
+  .uk-container {
+    @media screen and (min-width: $breakpoint-medium) {
+      padding: 0px 60px;
+    }
+  }
+
+  &__address,
+  &__copyright {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-avenir);
+    color: var(--color-white);
+    font-size: _calc-rem(12px);
+    line-height: 1.3;
+
+    @media screen and (min-width: $breakpoint-medium) {
+      text-align: right;
+    }
+  }
+
+  &__logo-center {
+    display: block;
+    width: 100%;
+    text-align: center;
+    max-width: 200px;
+    margin: 0 auto;
+
+    img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 70px;
+      margin: 0 auto;
+    }
+  }
+
   &__container {
     position: relative;
     max-width: 1280px;
@@ -73,7 +109,7 @@
   &__logo {
     max-width: 200px;
   }
-
+  
   &__logo-column {
     @media screen and (min-width: $breakpoint-footer) {
       margin-bottom: 45px;
@@ -97,6 +133,7 @@
       justify-content: space-between;
     }
   }
+  
 
   &__contact_us {
     display: block;
