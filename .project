@@ -1,2 +1,2 @@
 ENV_THEME=rosecrance 
-REMOTE_REPO=
+REMOTE_REPO=ssh://codeserver.dev.d8b8850f-f5d7-405e-8a95-eb56d7127e7a@codeserver.dev.d8b8850f-f5d7-405e-8a95-eb56d7127e7a.drush.in:2222/~/repository.git
