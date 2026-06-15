@@ -1,0 +1,47 @@
+.go-back-button-container {
+    padding: 0px 24px;
+    position: sticky;
+    z-index: 10;
+    top: 84px;
+    background-color: var(--color-cream);
+
+    @media screen and (min-width: $container-large-max-width) {
+        top: 150px;
+    }
+
+    .go-back-button {
+        padding: 24px 0px;
+        background-color: var(--color-cream);
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            padding: 24px 0px;
+        }
+        
+        &__button {
+            flex-shrink: 0;
+            padding: 0;
+            border: 0;
+            background-color: transparent;
+            color: var(--color-text);
+            font-family: var(--font-avenir);
+            font-size: _calc_rem(13px);
+            font-weight: 500;
+            
+            span {
+                vertical-align: text-bottom;
+            }
+            svg {
+                margin-right: 8px;
+                display: none;
+
+                @media screen and (min-width: $breakpoint-small) {
+                    display: inline;
+                    width: _calc-rem(15px);
+                }
+            }
+        }
+    }
+}

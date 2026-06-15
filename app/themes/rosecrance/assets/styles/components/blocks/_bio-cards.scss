@@ -1,0 +1,120 @@
+.staff-bio-card {
+  background-color: white;
+  max-width: 280px;
+  cursor: pointer;
+
+  &.no-bio {
+    cursor: default;
+  }
+
+  &__portrait {
+    height: 335px;
+    width: 100%;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  &__info-wrapper {
+    padding: 15px 14px 20px 20px;
+    display: flex;
+
+    svg, img {
+      flex-grow: 0;
+      height: 17px;
+      width: 17px;
+      flex-basis: 17px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__credentials-container {
+    flex-grow: 1;
+    span {
+      color: var(--color-primary-grey);
+      font-size: _calc-rem(18px);
+      line-height: 1.33;
+    }
+  }
+
+  &__title {
+    font-size: _calc-rem(14px);
+    line-height: 1;
+    margin-top: 12px;
+  }
+}
+
+.staff-bio-card-modal {
+  &__body {
+    width: 984px;
+    padding: 20px 20px 35px 20px;
+    background-color: white;
+  }
+
+  &__close {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    color: var(--color-dark-grey);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    svg {
+      transform: rotate(90deg);
+      height: 17px;
+      width: 17px;
+    }
+  }
+
+  &__close {
+    position: relative;
+    top: unset;
+    right: unset;
+    margin: 0px auto 20px auto;
+
+    @media screen and (min-width: $breakpoint-medium) {
+      margin: unset;
+      top: 10px;
+      right: 10px;
+      position: absolute;
+    }
+  }
+
+  &__content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+
+    @media screen and (min-width: $breakpoint-medium) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+
+  &__portrait {
+    width: 280px;
+    flex-shrink: 0;
+    min-height: 335px;
+  }
+
+  &__text-content {
+    padding: 15px 0 0 0;
+
+    h3 {
+      margin-bottom: 15px;
+    }
+
+    span {
+      display: block;
+      color: var(--color-dark-grey);
+      font-size: 14px;
+      font-family: var(--font-avenir);
+      margin-bottom: 30px;
+    }
+  }
+
+  &__wysiwyg {
+    @include wysiwyg-styles;
+  }
+}

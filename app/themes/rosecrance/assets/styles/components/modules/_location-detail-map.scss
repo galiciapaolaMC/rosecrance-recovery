@@ -1,0 +1,88 @@
+.location-detail-map {
+    padding: 40px 0;
+
+    @media screen and (min-width: $breakpoint-medium) {
+        padding: 80px 0;
+    }
+    
+    &__headline {
+        display: block;
+        width: 100%;
+        margin-bottom: 30px;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            margin-top: 12px;
+        }
+    }
+
+    &__address {
+        display: block;
+        width: 100%;
+        margin-bottom: 24px;
+
+        h3 {
+            display: block;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__phone-numbers {
+        display: block;
+        width: 100%;
+        margin-bottom: 24px;
+
+        h3 {
+            display: block;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: var(--color-text);
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+
+    &__service-hours {
+        display: block;
+        width: 100%;
+        margin-bottom: 24px;
+
+        h3 {
+            display: block;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        p {
+            display: block;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__map {
+        display: block;
+        width: 100%;
+
+        iframe {
+            display: block;
+            width: 100%;
+            min-height: 400px;
+        }
+
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    }
+}

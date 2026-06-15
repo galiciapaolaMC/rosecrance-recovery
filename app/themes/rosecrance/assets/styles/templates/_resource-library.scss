@@ -1,0 +1,104 @@
+.resource-library {
+  &__controls {
+      padding: 83px 30px 44px 30px;
+  }
+
+  &__dropdown-filters {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 1030px;
+      margin: auto;
+      gap: 11px;
+      flex-direction: column;
+
+      .select-field {
+          min-width: 200px;
+      }
+
+      .select-field:nth-child(1), .select-field:nth-child(3) {
+          @media screen and (min-width: $breakpoint-medium) {
+              flex-grow: 2;
+              max-width: 380px;
+          }
+      }
+
+      .select-field:nth-child(2) {
+          @media screen and (min-width: $breakpoint-medium) {
+              flex-grow: 1;
+              max-width: 250px;
+          }
+      }
+
+      @media screen and (min-width: $breakpoint-medium) {
+          flex-direction: row;
+      }
+  }
+
+  &__toggle-filters {
+      max-width: 1030px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+      flex-direction: column;
+
+      @media screen and (min-width: $breakpoint-small) {
+          flex-direction: row;
+      }
+  }
+
+  &__results-container {
+      background-color: var(--color-white);
+      padding: 30px 0 60px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 21px;
+      justify-content: stretch;
+      align-items: flex-start;
+  }
+
+  &__results-count-container {
+      width: 100%;
+      max-width: 1222px;
+      margin: auto;
+      font-family: var(--font-avenir);
+      font-size: _calc-rem(13px);
+      font-style: normal;
+      line-height: normal;
+      padding: 0px 30px 0px 30px;
+      box-sizing: border-box;        
+      
+      * {
+          font-family: inherit;
+          font-size: inherit;
+      }
+  }
+
+  &__results {
+      max-width: 1250px;
+      margin: auto;
+      flex-wrap: wrap;
+      padding: 0px 30px 0px 30px;
+      box-sizing: border-box;
+  }
+
+  &__view-button-container {
+      max-width: 1250px;
+      margin: auto;
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+      padding: 0px 30px 0px 30px;
+      box-sizing: border-box;
+  }
+  
+  .card-container {
+    &[data-visible="false"] {
+        display: none;
+    }
+  }
+}
+
+

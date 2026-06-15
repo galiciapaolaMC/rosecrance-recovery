@@ -1,0 +1,52 @@
+.bio-list {
+  padding: 40px 0;
+
+  @media screen and (min-width: $breakpoint-medium) {
+      padding: 80px 0;
+  }
+
+  &__bios-container {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 60px;
+
+    > * {
+      flex-basis: 280px;
+    }
+  }
+
+  &__heading + &__description {
+    margin-top: 20px;
+  }
+
+  &__heading, &__description {
+    text-align: center;
+  }
+
+  &__view-more-bios-container {
+    display: none;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 14px;
+
+    > * {
+      flex-basis: 280px;
+    }
+  }
+
+  &__view-more-button-container {
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__wrapper {
+    margin: auto;
+    max-width: 1280px;
+  }
+}

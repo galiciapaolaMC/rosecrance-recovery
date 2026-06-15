@@ -1,0 +1,59 @@
+.content-area {
+    padding: 40px 5px;
+
+    @media screen and (min-width: $breakpoint-medium) {
+        padding: 80px 0;
+    }
+
+    &__headline {
+        display: block;
+        width: 100%;
+        margin-bottom: 30px;
+        font-weight: 300;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__eyebrow {
+        font-size: _calc-rem(14px);
+        line-height: _calc-rem(22px);
+        font-weight: 500;
+        text-transform: uppercase;
+        display: block;
+        width: 100%;
+        margin-bottom: 30px;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__content {
+        display: block;
+        width: 100%;
+        margin-bottom: 30px;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            margin-bottom: 40px;
+        }
+
+        p {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    .btn {
+        display: table;
+        margin: 30px auto 0;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 20px 0 0;
+        }
+    }
+}

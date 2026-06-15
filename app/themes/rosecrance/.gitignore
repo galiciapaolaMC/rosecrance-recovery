@@ -1,0 +1,26 @@
+# Ignored theme files
+*.sass-cache*
+*.log
+
+# Vendor (e.g. Composer)
+bin
+vendor
+
+# Ignore build directory
+build
+# /languages/*.pot
+
+# Node Package Manager
+node_modules
+
+# Bower Components
+bower_components
+
+# Mac
+*.DS_Store
+thumbs.db
+.idea
+.env
+
+# Hidden Files
+!.github

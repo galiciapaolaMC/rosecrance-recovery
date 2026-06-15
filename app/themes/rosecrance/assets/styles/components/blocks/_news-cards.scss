@@ -1,0 +1,16 @@
+.news-card {
+    align-content: stretch;
+
+    &__title {
+        flex-grow: 1;
+        span {
+            font-size: _calc-rem(22px);
+            line-height: _calc-rem(24px);
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+        }
+    }
+}

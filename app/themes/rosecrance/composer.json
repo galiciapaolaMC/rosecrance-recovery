@@ -1,0 +1,21 @@
+{
+  "name": "modern-climate/rosecrance",
+  "description": "A WordPress theme for Rosecrance",
+  "type": "wordpress-theme",
+  "text-domain": "rosecrance",
+  "config": {
+    "vendor-dir": "vendor",
+    "bin-dir": "bin"
+  },
+  "autoload": {
+    "psr-4": {
+      "Rosecrance\\": ""
+    }
+  },
+  "require": {
+    "vinkla/extended-acf": "13.7.0"
+  },
+  "require-dev": {
+    "php-stubs/acf-pro-stubs": "*"
+  }
+}

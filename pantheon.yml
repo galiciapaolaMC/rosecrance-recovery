@@ -1,0 +1,4 @@
+# IMPORTANT NOTE:
+# Edit this file to override the pantheon.upstream.yml file in /wp root
+api_version: 1
+php_version: 8.1

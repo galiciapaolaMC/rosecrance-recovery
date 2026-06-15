@@ -1,0 +1,43 @@
+.text-field {
+    position: relative;
+    min-width: 320px;
+
+    &__label {
+        display: block;
+        margin-bottom: 15px;
+        font-family: var(--font-avenir);
+        text-transform: uppercase;
+        font-size: _calc-rem(14px);
+    }
+
+    &__field-container {
+        position: relative;
+        width: 100%;
+        
+        svg {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            height: 16px;
+            width: 16px;
+        }
+    }
+
+    &__field {
+        padding: 13px 12px 13px 12px;
+        appearance: none;
+        width: 100%;
+        font-family: var(--font-avenir);
+        font-size: _calc-rem(14px);
+        line-height: normal;
+        color: var(--color-dark-grey);
+        border: 1px solid var(--color-medium-grey);
+        border-radius: 3px;
+    }
+
+    &--has-icon {
+        .text-field__field {
+            padding: 13px 12px 13px 44px;
+        }
+    }
+}

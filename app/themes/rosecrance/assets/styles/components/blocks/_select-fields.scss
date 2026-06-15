@@ -1,0 +1,115 @@
+.select-field {
+    position: relative;
+    min-width: 320px;
+
+    &__label {
+        display: block;
+        margin-bottom: 15px;
+        font-family: var(--font-avenir);
+        text-transform: uppercase;
+        font-size: _calc-rem(14px);
+    }
+
+    &__button {
+        width: 100%;
+        padding: 12px 13px 12px 13px;
+        font-family: var(--font-avenir);
+        font-size: _calc-rem(14px);
+        line-height: normal;
+        color: var(--color-dark-grey);
+        background-color: var(--color-white);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid var(--color-medium-grey);
+        cursor: pointer;
+        border-radius: 3px;
+    }
+
+    &__selected-value {
+        text-align: left;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    &__arrow {
+        svg {
+            height: 10px;
+            width: 10px;
+        }
+    }
+
+    &__dropdown {
+        position: absolute;
+        list-style: none;
+        width: 100%;
+        background-color: var(--color-white);
+        border-radius: 3px;
+        max-height: 280px;
+        overflow-y: auto;
+        bottom: 0 px;
+        left: 0;
+        display: none;
+        z-index: 1000;
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-primary-orange) #f6f6f6;
+    }
+
+    &--active {
+        .select-field__dropdown {
+            display: block;
+        }
+
+        .select-field__arrow {
+            svg {
+                transform: rotate(180deg);
+                height: 10px;
+                width: 10px;
+            }
+        }
+    }
+}
+
+.select-field-option {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+
+    &:hover {
+        background-color: var(--color-primary-orange);
+    }
+
+    &[data-val-type='val-type---checkbox'] {
+        display: none;
+    }
+
+    &__label {
+        color: var(--color-dark-grey);
+        font-family: var(--font-avenir);
+        font-size: 14px;
+    }
+
+    &__container {
+        padding: 7px 32px 7px 12px;
+        display: block;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            accent-color: var(--color-primary-orange);
+            color:  var(--color-primary-orange);
+        }
+    }
+
+    &--child {
+        padding-left: 15px;
+    }
+}

@@ -1,0 +1,229 @@
+.wysiwyg {
+    padding: 40px 0;
+
+    @media screen and (min-width: $breakpoint-medium) {
+        padding: 80px 0;
+    }
+    
+    &__content {
+        display: block;
+        width: 100%;
+        margin-bottom: 30px;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            margin-bottom: 40px;
+        }
+
+        h1,
+        h3,
+        h4 {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            color: var(--color-dark-grey);
+            font-weight: 300;
+        }
+
+        h2 {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            color: var(--color-primary-grey);
+            font-weight: 300;
+        }
+        
+        p {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        ol,
+        ul {
+            padding: 10px 0 10px 40px;
+        }
+
+        a {
+            color: var(--color-dark-grey);
+            text-decoration: underline;
+        }
+
+        .btn {
+            display: inline-block;
+            color: var(--color-white);
+            text-decoration: none;
+        }
+
+        &.citation-container {
+            font-size: _calc-rem(14px);
+            font-weight: 500;
+        }
+    }
+
+    &__social-buttons {
+        display: block;
+        width: 100%;
+        margin: 20px 0;
+
+        .social-wrapper {
+            display: block;
+            width: 100%;
+
+            a {
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                margin-right: 20px;
+
+                svg {
+                    display: block;
+                    width: _calc-rem(24px);
+                    height: _calc-rem(24px);;
+                }
+            }
+        }
+    }
+
+    &--custom-block-quote {
+        .wysiwyg__content {
+            blockquote {
+                color: var(--color-dark-grey);
+                font-family: var(--font-avenir);
+                font-size: _calc-rem(24px);
+                line-height: 30px;
+                padding-left: 20px;
+                padding-top: 5px;
+                line-height: 1.25;
+                display: block;
+                border-left: var(--color-primary-orange) 4px solid;
+                margin-top: 20px;
+                margin-bottom: 20px;
+
+                p {
+                    margin: 0;
+                }
+            }
+
+            blockquote + blockquote {
+                margin-top: 40px;
+            }
+        }
+    }
+
+    #mongo-form {
+        display: block;
+        width: 100%;
+        line-height: normal;
+        max-width: 580px;
+        margin: 0 auto;
+    }
+
+    div#bboxdonation_divForm,
+    div#bboxdonation_divForm label,
+    div#bboxdonation_divForm span,
+    div#bboxdonation_divForm p,
+    div#bboxdonation_divForm select,
+    div#bboxdonation_divForm input,
+    div#bboxdonation_divForm textarea {
+        color: var(--color-text);
+        font-family: var(--font-avenir);
+        font-size: _calc-rem(16px);
+        line-height: _calc-rem(20px);
+        text-align: left;
+    }
+
+    .BBFormContainer[data-bbox-part-id="16d7efd6-5bf6-436d-8309-61685529ca36"] .BBDFormSectionComments .BBFormTextArea,
+    .BBFormContainer[data-bbox-part-id="16d7efd6-5bf6-436d-8309-61685529ca36"] .BBDFormSectionComments .BBFormFieldLabel,
+    .BBFormContainer[data-bbox-part-id="16d7efd6-5bf6-436d-8309-61685529ca36"] #reCAPTCHADisclosure {
+        margin-left: 0;
+    }
+
+    .BBFormContainer[data-bbox-part-id="16d7efd6-5bf6-436d-8309-61685529ca36"] .BBFormRadioAmount,
+    .BBFormContainer[data-bbox-part-id="16d7efd6-5bf6-436d-8309-61685529ca36"] .BBFormRadioLabelGivingLevelOther span:first-child {
+        font-size: _calc-rem(16px);
+        line-height: _calc-rem(20px);
+        color: var(--color-text);
+        font-family: var(--font-avenir);
+        text-align: center !important;
+        margin: 0 !important;
+        display: block;
+        width: 100%;
+    }
+
+    .BBFormContainer[data-bbox-part-id="16d7efd6-5bf6-436d-8309-61685529ca36"].BBFormWidthNarrow-Less600 .BBFormRadioLabelGivingLevel {
+        padding: 10px 10px;
+    }
+
+    .BBFormContainer[data-bbox-part-id="16d7efd6-5bf6-436d-8309-61685529ca36"] .BBFormRadioLabelGivingLevelSelected {
+        background-color: var(--color-primary-orange);
+        border-color: var(--color-primary-orange);
+        color: var(--color-text);
+    }
+
+    #mongo-form input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 15px;
+        height: 15px;
+        background: var(--color-white);
+        border: 1px solid var(--color-dark-grey);
+        border-radius: 3px;
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 2px;
+        position: relative;
+        top: -1px;
+    }
+
+    #mongo-form input[type="checkbox"]:checked {
+        background: var(--color-primary-orange);
+    }
+
+    div#bboxdonation_divForm label,
+    div#bboxdonation_divForm span {
+        margin-bottom: 5px;
+    }
+
+    div#bboxdonation_divForm select, 
+    div#bboxdonation_divForm input, 
+    div#bboxdonation_divForm textarea {
+        border-radius: 0;
+    }
+
+    div#bboxdonation_divForm label.BBFormFieldLabel.BBFormSummaryTotal {
+        display: none !important;
+    }
+
+    .BBFormContainer[data-bbox-part-id="16d7efd6-5bf6-436d-8309-61685529ca36"] .BBFormSubmitbutton {
+        font-size: _calc-rem(14px);
+        font-family: var(--font-avenir);
+        font-weight: 400;
+        line-height: _calc-rem(20px);
+        text-align: center;
+        box-sizing: border-box;
+        padding: 8px 10px;
+        border-radius: 3px;
+        text-decoration: none;
+        cursor: pointer;
+        color: var(--color-dark-grey);
+        background-color: var(--color-primary-orange);
+        border: 1px solid var(--color-primary-orange);
+    }
+
+    div#reCAPTCHADisclosure p {
+        display: block;
+        width: 100%;
+        text-align: left;
+        font-size: 13px !important;
+        box-sizing: border-box;
+        padding-left: 15px;
+        margin-top: 15px;
+    }
+
+    div#reCAPTCHADisclosure p a {
+        color: var(--color-dark-grey);
+        text-decoration: underline;
+        font-weight: 700;
+    }
+}

@@ -1,0 +1,29 @@
+// Mixins
+
+// Calculate rem value based on the px value passed in.
+@function _calc-rem($size) {
+  $rem-size: calc($size / 16px);
+  @return #{$rem-size}rem;
+}
+
+@mixin wysiwyg-styles {
+  * {
+    b, strong {
+      font-weight: 700;
+    }
+
+    i, em {
+      font-style: italic
+    }
+  }
+
+  p {
+    font-size: _calc-rem(15px);
+    margin-bottom: 10px;
+  }
+
+  li {
+    margin-bottom: 5px;
+    font-size: _calc-rem(15px);
+  }
+}

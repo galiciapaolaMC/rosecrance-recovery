@@ -1,0 +1,150 @@
+.condition-symptoms {
+    padding: 40px 5px;
+
+    @media screen and (min-width: $breakpoint-medium) {
+        padding: 80px 0;
+    }
+
+    &__headline {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        font-weight: 300;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__eyebrow {
+        font-size: _calc-rem(14px);
+        line-height: _calc-rem(22px);
+        font-weight: 500;
+        text-transform: uppercase;
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    &__content {
+        display: block;
+        width: 100%;
+        margin-bottom: 30px;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            margin-bottom: 40px;
+        }
+
+        p {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        ul,
+        ol {
+            font-size: _calc-rem(14px);
+            padding-left: 15px;
+            margin-bottom: 30px;
+            font-family: var(--font-avenir);
+
+            @media screen and (min-width: $breakpoint-medium) {
+                margin-bottom: 10px;
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-rows: auto 1fr auto;
+            }
+
+            li {
+                margin-bottom: 10px;
+
+                @media screen and (min-width: $breakpoint-medium) {
+                    padding-right: 40px;
+                }
+            }
+        }
+    }
+
+    &__color-block-container {
+        padding-left: 40px; // override uikit padding
+    }
+
+    &__color-block {
+        margin-top: 0;
+        margin-bottom: 30px;
+        padding: 30px;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            max-width: 474px;
+            margin-top: 0;
+            margin-bottom: 20px !important;
+            padding: 35px 40px;
+        }
+
+        &__title {
+            font-size: _calc-rem(24px);
+            line-height: _calc-rem(30px);
+            font-weight: 300;
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            color: var(--color-dark-grey)
+        }
+
+        &__content {
+            font-size: _calc-rem(18px);
+            line-height: _calc-rem(25px);
+            font-weight: 500;
+
+            a {
+                color: var(--color-text);
+                text-decoration: underline;
+            }
+
+            ul, 
+            ol {
+                padding-top: 10px;
+            }
+
+            p {
+                margin-top: 15px;
+            }
+        }
+
+        &.text-color-white {
+            color: var(--color-white);
+
+            .color-block-title,
+            .content-block {
+                color: var(--color-white);
+
+                a {
+                    color: var(--color-white);
+                }
+            }
+        }
+    }
+
+    &__additional-content {
+        display: block;
+        width: 100%;
+        margin-top: 0;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            margin-top: 8px;
+        }
+    }
+
+    &__list-container {
+        ul {
+            padding-left: 15px;
+            column-count: 2;
+            column-gap: 80px;
+            font-size: _calc-rem(14px);
+            
+            li {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

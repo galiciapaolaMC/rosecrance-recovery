@@ -1,0 +1,14 @@
+.video-post {
+  .large-resource-hero__section--top {
+    margin-bottom: 0;
+    padding-bottom: 75px;
+  }
+
+  .large-resource-hero {
+    padding-top: 24px;
+
+    @media screen and (min-width: $breakpoint-medium) {
+      padding-top: 40px;
+    }
+  }
+}

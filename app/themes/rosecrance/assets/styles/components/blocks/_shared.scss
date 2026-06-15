@@ -1,0 +1,50 @@
+.wp-block {
+  max-width: 100%;
+}
+
+.content-block {
+  b,
+  strong {
+    font-weight: 700;
+  }
+
+  i,
+  em {
+    font-style: italic;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 30px;
+  }
+
+  ol {
+    list-style-type: decimal;
+    padding-left: 30px;
+  }
+}
+
+.hero__announcement {
+  width: 100%;
+  padding: 20px 40px;
+  color: var(--color-white);
+  background-color: var(--color-primary-blue);
+  font-size: _calc-rem(14px);
+  text-align: center;
+  line-height: 1.42;
+  font-family: var(--font-avenir);
+  margin-top: 2px;
+
+  @media screen and (min-width: $breakpoint-medium) {
+      margin-top: 13px;
+  }
+
+  a {
+      color: var(--color-white);
+      text-decoration: underline;
+  }
+}

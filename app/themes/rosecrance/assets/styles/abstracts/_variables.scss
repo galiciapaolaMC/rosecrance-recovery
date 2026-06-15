@@ -1,0 +1,116 @@
+// Variables
+
+// Directories
+$images: '../../assets/images';
+
+// Colors
+$black: #000;
+$white: #fff;
+$cream: #FFF9F0;
+$primary-orange: #FAA834;
+$primary-blue: #007EA8;
+$primary-grey: #695E4A;
+$dark-grey: #484848;
+$dark-blue: #0054A0;
+$light-blue: #60AFDD;
+$purple: #AD005B;
+$light-grey: #D9D9D9;
+$medium-grey: #AFA593;
+
+$black-10: rgba($black, 0.1);
+$black-20: rgba($black, 0.2);
+$black-30: rgba($black, 0.3);
+$black-40: rgba($black, 0.4);
+$black-50: rgba($black, 0.5);
+$black-60: rgba($black, 0.6);
+$black-70: rgba($black, 0.7);
+$black-80: rgba($black, 0.8);
+$black-90: rgba($black, 0.9);
+
+$white-10: rgba($white, 0.1);
+$white-20: rgba($white, 0.2);
+$white-30: rgba($white, 0.3);
+$white-40: rgba($white, 0.4);
+$white-50: rgba($white, 0.5);
+$white-60: rgba($white, 0.6);
+$white-70: rgba($white, 0.7);
+$white-80: rgba($white, 0.8);
+$white-90: rgba($white, 0.9);
+
+$primary-orange-10: rgba($primary-orange, 0.1);
+$primary-orange-80: rgba($primary-orange, 0.8);
+$primary-grey-80: rgba($primary-grey, 0.8);
+$primary-blue-80: rgba($primary-blue, 0.8);
+$white-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 64.98%);
+$menu-gradient: linear-gradient(0deg, rgba(250, 168, 52, 0.10) 0%, rgba(250, 168, 52, 0.10) 100%), #FFF;
+$subnav-gradient: linear-gradient(270deg, #FFF9F0 41%, rgba(255, 249, 240, 0.00) 100%);
+
+// UIkit custom variables
+
+// For more variables that can be overridden:
+// /node_modules/uikit/src/scss/variables-theme.scss
+
+// Fonts
+$avenir: "Avenir";
+$freight-text-pro: "freight-text-pro", serif;
+
+// Font Sizes
+$font-size-sm: _calc-rem(16px);
+$font-size-md: _calc-rem(18px);
+$font-size-lg: _calc-rem(24px);
+$font-size-xl: _calc-rem(36px);
+$font-size-xxl: _calc-rem(40px);
+$font-size-xxxl: _calc-rem(54px);
+
+// Mobile Font Sizes
+$mobile-font-size-sm: _calc-rem(12px);
+$mobile-font-size-md: _calc-rem(16px);
+$mobile-font-size-lg: _calc-rem(18px);
+$mobile-font-size-xl: _calc-rem(24px);
+$mobile-font-size-xxl: _calc-rem(36px);
+$mobile-font-size-xxxl: _calc-rem(48px);
+
+// Borders
+$global-border-radius: 0;
+
+// Screen widths
+$container-max-width: 1200px;
+$container-xsmall-max-width: 750px;
+$container-small-max-width: 900px;
+$container-large-max-width: 1000px;
+$container-xlarge-max-width: 1600px;
+
+// Breakpoints
+$breakpoint-small: 640px;
+$breakpoint-footer: 800px;
+$breakpoint-medium: 960px;
+$breakpoint-large: 1280px;
+$breakpoint-xlarge: 1600px;
+$breakpoint-xsmall-max: ($breakpoint-small - 1);
+$breakpoint-small-max: ($breakpoint-medium - 1);
+$breakpoint-medium-max: ($breakpoint-large - 1);
+$breakpoint-large-max: ($breakpoint-xlarge - 1);
+
+:root {
+    --font-avenir: #{$avenir};
+    --font-freight-text-pro: #{$freight-text-pro};
+
+    --color-white: #{$white};
+    --color-cream: #{$cream};
+    --color-black: #{$black};
+    --color-primary-orange: #{$primary-orange};
+    --color-primary-blue: #{$primary-blue};
+    --color-primary-grey: #{$primary-grey};
+    --color-dark-grey: #{$dark-grey};
+    --color-dark-blue: #{$dark-blue};
+    --color-light-blue: #{$light-blue};
+    --color-purple: #{$purple};
+    --color-light-grey: #{$light-grey};
+    --color-medium-grey: #{$medium-grey};
+    
+    --white-gradient: #{$white-gradient};
+    --menu-gradient: #{$menu-gradient};
+    --subnav-gradient: #{$subnav-gradient};
+
+    --color-text: #{$dark-grey};
+}

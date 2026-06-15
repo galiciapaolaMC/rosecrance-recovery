@@ -1,0 +1,14 @@
+.podcast-embed {
+    padding: 40px 0;
+
+    @media screen and (min-width: $breakpoint-medium) {
+        padding: 80px 0;
+    }
+    
+    &__content {
+        display: block;
+        width: 100%;
+        max-width: 660px;
+        margin: 0 auto;
+    }
+}

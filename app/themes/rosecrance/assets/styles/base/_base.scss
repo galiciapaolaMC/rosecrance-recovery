@@ -1,0 +1,74 @@
+// Basic Setup
+
+html {
+  background-color: var(--color-cream);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  word-wrap: break-word;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-family: var(--font-avenir);
+  font-size: $mobile-font-size-xxxl;
+  line-height: _calc-rem(52px);
+  font-weight: 300;
+  color: var(--color-primary-grey);
+
+  @media screen and (min-width: $breakpoint-medium) {
+    font-size: $font-size-xxxl;
+    line-height: _calc-rem(65px);
+  }
+}
+
+h2 {
+  font-family: var(--font-avenir);
+  font-size: $mobile-font-size-xxl;
+  line-height: _calc-rem(44px);
+  font-weight: 300;
+  color: var(--color-primary-grey);
+
+  @media screen and (min-width: $breakpoint-medium) {
+    font-size: $font-size-xxl;
+    line-height: _calc-rem(44px);
+  }
+}
+
+h3 {
+  font-family: var(--font-avenir);
+  font-size: $mobile-font-size-lg;
+  line-height: _calc-rem(30px);
+  font-weight: 300;
+  color: var(--color-primary-grey);
+
+  @media screen and (min-width: $breakpoint-medium) {
+    font-size: $font-size-lg;
+    line-height: _calc-rem(30px);
+  }
+}
+
+.uk-container {
+  max-width: 1280px;
+  box-sizing: border-box;
+
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media (min-width: $breakpoint-medium) {
+    padding-left: 158px;
+    padding-right: 158px;
+  }
+}
+
+#primary {
+  padding-top: 84px;
+
+  @media (min-width: $container-large-max-width) {
+    padding-top: 160px;
+  }
+}

@@ -1,0 +1,18 @@
+.logos {
+  padding: 40px 0;
+
+  @media screen and (min-width: $breakpoint-medium) {
+      padding: 80px 0;
+  }
+  
+  &__content {
+    img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-height: 75px;
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+}

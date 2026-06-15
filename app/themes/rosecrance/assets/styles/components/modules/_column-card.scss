@@ -1,0 +1,46 @@
+.column-card {
+  padding: 40px 0;
+
+  @media screen and (min-width: $breakpoint-medium) {
+      padding: 80px 0;
+  }
+  
+  &__content {
+    &--title {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+      font-size: _calc-rem(40px);
+      line-height: _calc-rem(44px);
+      color: var(--color-dark-grey);
+      font-family: var(--font-avenir);
+      font-weight: 300;
+    }
+
+    &--text {
+      display: block;
+      width: 100%;
+      font-size: _calc-rem(24px);
+      line-height: _calc-rem(30px);
+      color: var(--color-dark-grey);
+      font-family: var(--font-avenir);
+      font-weight: 300;
+    }
+
+    img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-height: 75px;
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+
+  .two-column-card {
+    .column-card__content {
+      max-width: 320px;
+      margin: 0 auto;
+    }
+  }
+}

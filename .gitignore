@@ -1,0 +1,34 @@
+# IDE
+.vscode/
+*.DS_Store
+thumbs.db
+.idea
+.env
+.htaccess
+
+# Ignored theme files
+*.sass-cache*
+*.log
+
+# Ignore build directory
+app/themes/*/build
+wp
+
+# Application
+app/uploads/*
+app/plugins/*
+!app/plugins/wordpress-seo-premium
+app/themes/mc-wp-starter-theme
+app/themes/twentytwenty
+app/themes/twentytwentyone
+app/themes/twenty*
+
+# Composer
+vendor
+!app/plugins/**/vendor*
+composer.phar
+auth.json
+autologin.php
+
+# Node Package Manager
+node_modules

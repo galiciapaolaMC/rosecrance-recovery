@@ -1,0 +1,16 @@
+.resource-library-banner {
+    background-size: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 0 70px 0;
+    background-position-y: 260px;
+
+    &__heading {
+        color: var(--color-white);
+        font-size: _calc-rem(54px);
+        line-height: 1.2;
+        font-family: var(--font-avenir);
+        text-align: center;
+    }
+}

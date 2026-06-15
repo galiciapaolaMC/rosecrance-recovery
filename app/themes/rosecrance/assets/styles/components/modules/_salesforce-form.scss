@@ -1,0 +1,395 @@
+.salesforce-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    label {
+        display: block;
+        flex-basis: calc(50% - 15px);
+        flex-grow: 1;
+
+        div {
+            font-size: _calc-rem(12px);
+            font-family: var(--font-avenir);
+            font-weight: 500;
+            line-height: normal;
+            margin-bottom: 6px;
+        }
+    }
+
+    input:not([type="checkbox"]):not([type="submit"]):not([type="radio"]), textarea {
+        width: 100%;
+        border-color: transparent;
+        border-radius: 3px;
+        padding: 10px;
+        appearance: none;
+        max-width: 100%;
+    }
+
+    select {
+        width: 100%;
+        border-color: transparent;
+        border-radius: 3px;
+        padding: 10px;
+        max-width: 100%;
+        padding-right: 21px;
+        position: relative;
+    }
+
+    .required {
+        color: #F00;
+    }
+
+    &__field-group {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    &__field-group + &__field-group {
+        padding-top: 15px;
+        border-top: 1px solid black;
+    }
+
+    &__heading-container {
+        max-width: 375px;
+        margin: auto;
+
+        h2 {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__pre-form-content {
+        margin-bottom: 22px;
+        
+        @include wysiwyg-styles;
+    }
+
+    &__opt-in-section {
+        flex-basis: 100%;
+        label {
+            display: flex;
+            gap: 10px;
+
+            input[type="checkbox"] {
+                margin: 0;
+            }
+
+            div {
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    .disclaimer-text {
+        font-size: _calc-rem(8px);
+        font-family: var(--font-avenir);
+        color: var(--color-dark-grey);
+        margin-top: 10px;
+        margin-bottom: 18px;
+    }
+
+    .full-width-field {
+        flex-basis: 100%;
+    }
+
+    input[type="submit"] {
+        margin-top: 20px;
+        margin-left: auto;
+        display: block;
+    }
+
+    &__radio-field {
+        flex-direction: column;
+    }
+
+    .form-error-message {
+        color: red;
+        font-size: _calc-rem(12px);
+        font-family: var(--font-avenir);
+        font-weight: 500;
+        line-height: normal;
+        margin-top: 6px;
+    }
+
+    .g-recaptcha {
+        margin-top: 18px;
+        margin-bottom: 18px;
+    }
+}
+
+// specific styles for referral form
+.salesforce-form--self-referral, .salesforce-form--self-referral-existing, .salesforce-form--friend-family, .salesforce-form--alumni, .salesforce-form--professional-referral, .salesforce-form--media {
+    max-width: 375px;
+    margin: auto;
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    label {
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 180px;
+    }
+}
+
+.referral-forms-container {
+    max-width: 375px;
+    margin: auto;
+    width: 100%;
+
+    &__referral-type {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+
+        div {
+            font-size: _calc-rem(12px);
+            font-family: var(--font-avenir);
+            font-weight: 500;
+            line-height: normal;
+            margin-bottom: 6px;
+        }
+    }
+
+    input:not([type="checkbox"]):not([type="submit"]), textarea {
+        width: 100%;
+        border-color: transparent;
+        border-radius: 3px;
+        padding: 10px;
+        appearance: none;
+        max-width: 100%;
+    }
+
+    select {
+        width: 100%;
+        border-color: transparent;
+        border-radius: 3px;
+        padding: 10px;
+        max-width: 100%;
+        padding-right: 21px;
+        position: relative;
+    }
+
+    .required {
+        color: #F00;
+    }
+
+    .salesforce-form__opt-in-section {
+        flex-basis: 100%;
+        label {
+            display: flex;
+            gap: 10px;
+
+            input[type="checkbox"] {
+                margin: 0;
+            }
+
+            div {
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    .salesforce-form__field-group {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .salesforce-form__field-group + .salesforce-form__field-group {
+        padding-top: 15px;
+        border-top: 1px solid black;
+    }
+}
+
+
+.salesforce-form--hidden {
+    display: none;
+}
+
+.bb-donation-form {
+    max-width: 200px;
+    margin: auto;
+    @media screen and (min-width: $breakpoint-medium) {
+        max-width: 375px;
+    }
+
+    
+    input:not([type="checkbox"]):not([type="submit"]):not([type="radio"]), textarea {
+        border-color: transparent;
+        border-radius: 3px;
+        padding: 10px;
+        appearance: none;
+        max-width: 100%;
+        display: inline-block;
+    }
+
+    select {
+        width: 100%;
+        border-color: transparent;
+        border-radius: 3px;
+        padding: 10px !important;
+        max-width: 100%;
+        padding-right: 21px;
+        position: relative;
+        border-color: transparent !important;
+    }
+
+    textarea {
+        border-color: transparent !important
+    } 
+
+    #divName, .BBFieldBillingStateZip .BBFormFieldContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    #bboxdonation_billing_lblFullName, #bboxdonation_billing_billingAddress_lblStateZip {
+        flex-basis: 100%;
+        flex-shrink: 0;
+    }
+
+    #bboxdonation_billing_txtFirstName, #bboxdonation_billing_txtLastName, #bboxdonation_billing_billingAddress_ddState, #bboxdonation_billing_billingAddress_txtZip {
+        flex-basis: 40%;
+        flex-grow: 1;
+        flex-shrink: 1;
+        margin: 0 !important;
+    }
+
+    #bboxdonation_comment_lblComments {
+        margin-left: 0;
+    }
+
+    #bboxdonation_comment_txtComments {
+        margin-left: 0;
+    }
+
+    #bboxdonation_gift_txtOtherAmountButtons {
+        font-size: _calc-rem(12px) !important;
+        margin: 0 !important;
+    }
+
+    #bboxsecure {
+        border-bottom: 1px solid !important;
+    }
+
+    * {
+        font-family: var(--font-avenir);
+        font-size: 12px !important;
+    }
+
+    #bboxdonation_gift_rdlstGivingLevels {
+        flex-direction: column;
+
+        display: flex;
+        align-items: stretch;
+        gap: 15px;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            flex-direction: row;
+        }
+    }
+
+    .BBFormSectionRecurrenceInfo {
+        padding-left: 0;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            padding-left: 115px;
+        }
+    }
+
+    .BBFormRadioButtonContainer {
+        width: 100%;
+
+        line-height: normal !important;
+        height: 100%;
+    }
+
+    .BBFormRadioLabel {
+        width: 100%;   
+        transition: .4s ease all !important;
+        transition: 0s color !important;
+
+        line-height: 50% !important;
+        font-size: _calc-rem(12px);
+        border: 1px solid var(--color-white) !important;
+    }
+
+    .BBFormGiftOtherAmount {
+        padding: 0 !important;
+        line-height: 100% !important;
+        min-height: unset !important;
+    }
+
+    .BBFormRadioAmount {
+        font-size: _calc-rem(12px);
+    }
+
+    .BBFormRadioDescriptionOther {
+        font-size: _calc-rem(12px);
+    }
+
+    .BBFormRadioLabelGivingLevelNotSelected {
+        #bboxdonation_gift_txtOtherAmountButtons {
+            display: none;
+        }
+    }
+
+    .BBFormRadioLabelGivingLevelSelected {
+        background: var(--color-primary-orange) !important;
+        border: 1px solid var(--color-primary-orange) !important;
+        .BBFormRadioAmount {
+            color: var(--color-primary-grey) !important;
+        }
+    }
+
+    .BBFormRadioLabelGivingLevelOther.BBFormRadioLabelGivingLevelSelected {
+        height: 100% !important;
+        padding: 8px !important;
+
+        .BBFormTextbox {
+            padding: 4px !important;
+        }
+    }
+    
+    .BBFormSectionHeading {
+        border: 0 !important;
+        padding: 0 !important;
+        margin-bottom: 4px !important;
+
+        * {
+            font-weight: 800 !important;
+        }
+    }
+    
+    .BBFormFieldContainer {
+        margin: 10px 0px !important;
+    }
+
+    .BBFormFieldLabel {
+        text-align: left !important;
+    }
+    #bboxdonation_btnSubmit {
+        background-color: var(--color-primary-orange) !important;
+        border: 1px solid var(--color-primary-orange) !important; 
+        color: var(--color-primary-grey) !important;
+        padding: 8px 10px !important;
+        font-size: _calc-rem(14px) !important;
+        margin-left: auto; 
+        display: block !important;
+
+        &:hover {
+            background-color: var(--color-primary-orange) !important;
+            border: 1px solid var(--color-primary-orange) !important;
+        }
+    }
+}

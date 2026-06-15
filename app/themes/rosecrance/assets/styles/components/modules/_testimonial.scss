@@ -1,0 +1,181 @@
+.testimonial {
+    padding: 40px 0;
+
+    @media screen and (min-width: $breakpoint-medium) {
+        padding: 80px 0;
+    }
+    
+    .uk-container {
+        @media screen and (min-width: $breakpoint-medium) {
+            padding-top: 78px;
+        }
+    }
+
+    &__container {
+        max-width: 1280px;
+        margin: auto;
+    }
+
+    &__inner-wrapper {
+        max-width: 964px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            flex-direction: row;
+
+        }
+
+    }
+
+    .long-copy {
+        .testimonial__quote {
+            @media screen and (min-width: $breakpoint-medium) {
+                font-size: _calc-rem(36px);
+                line-height: 1.2;
+                letter-spacing: -0.72px;
+            }
+        }
+    }
+
+    .short-copy {
+        .testimonial__quote {
+            @media screen and (min-width: $breakpoint-medium) {
+                font-size: _calc-rem(48px);
+                line-height: 1.2;
+                letter-spacing: -0.96px;
+                
+                &::before {
+                    left: -22px;
+                }
+            }
+        }
+    }
+
+    .image-left {
+        .testimonial__image {
+            @media screen and (min-width: $breakpoint-medium) {
+                margin: -78px auto 0 auto;
+            }
+        }
+
+        .testimonial__content-wrapper {
+            .testimonial__content {
+                @media screen and (min-width: $breakpoint-medium) {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .image-right {
+        .testimonial__image-wrapper {
+            order: 1;
+
+            @media screen and (min-width: $breakpoint-medium) {
+                order: 2;
+            }
+
+            @media screen and (min-width: $breakpoint-large) {
+            }
+            
+            .testimonial__image {
+                @media screen and (min-width: $breakpoint-medium) {
+                    margin: -78px auto 0 auto;
+                }
+            }
+        }
+
+        .testimonial__content-wrapper {
+            order: 2;
+            
+            @media screen and (min-width: $breakpoint-medium) {
+                order: 1;
+            }
+        }
+    }
+
+    &__content-wrapper {
+        margin-top: 0 !important;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__content {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        padding: 40px 30px 120px;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            max-width: 392px;
+            padding: 67px 0 64px;
+        }
+    }
+
+    &__quote {
+        font-size: _calc-rem(36px);
+        line-height: 1.2;
+        font-weight: 400;
+        color: var(--color-white);
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        position: relative;
+
+        &::before {
+            content: open-quote;
+            position: absolute;
+            top: 0px;
+            left: -16px;
+        }
+
+        &::after {
+            content: close-quote;
+        }
+    }
+
+    &__attribution {
+        display: block;
+        width: 100%;
+        text-align: left;
+        color: var(--color-white);
+        font-weight: 500;
+        font-size: _calc-rem(14px);
+        line-height: _calc-rem(22px);
+        text-transform: uppercase;
+        font-family: var(--font-avenir);
+    }
+
+    &__image-wrapper {
+        position: relative;
+        margin: 0;
+        width: 100%;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            padding-bottom: 60px;
+            max-width: 475px;
+
+        }
+
+        .testimonial__image {
+            display: block;
+            width: 100%;
+            height: 353px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: auto;
+
+            @media screen and (min-width: $breakpoint-medium) {
+                height: 116%;
+                height: 570px;
+            }
+        }
+    }
+}
