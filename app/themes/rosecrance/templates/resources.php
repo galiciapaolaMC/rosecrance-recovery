@@ -18,6 +18,7 @@ $toggle_podcasts = true;
 $toggle_videos = true;
 $toggle_blog_articles = true;
 $toggle_extended_articles = true;
+$toggle_drug_fact_sheets = true;
 
 if (isset($_GET['filter']) && !empty($_GET['filter'])) {
     $filter = $_GET['filter'];
@@ -27,26 +28,40 @@ if (isset($_GET['filter']) && !empty($_GET['filter'])) {
         $toggle_videos = false;
         $toggle_blog_articles = false;
         $toggle_extended_articles = false;
+        $toggle_drug_fact_sheets = false;
     } else if ($filter === 'videos') {
         $toggle_podcasts = false;
         $toggle_videos = true;
         $toggle_blog_articles = false;
         $toggle_extended_articles = false;
+        $toggle_drug_fact_sheets = false;
     } else if ($filter === 'blog-post') {
         $toggle_podcasts = false;
         $toggle_videos = false;
         $toggle_blog_articles = true;
         $toggle_extended_articles = false;
+        $toggle_drug_fact_sheets = false;
     } else if ($filter === 'extended-article') {
         $toggle_podcasts = false;
         $toggle_videos = false;
         $toggle_blog_articles = false;
         $toggle_extended_articles = true;
-    } 
+        $toggle_drug_fact_sheets = false;
+    } else if ($filter === 'drug-fact-sheet') {
+        $toggle_podcasts = false;
+        $toggle_videos = false;
+        $toggle_blog_articles = false;
+        $toggle_extended_articles = false;
+        $toggle_drug_fact_sheets = true;
+
+    }
 }
+
+$options = Options::getSiteOptions();
+$header_activation = ACF::getField('header-activation', $options);
 ?>
 
-<div id="primary" class="resource-library">
+<div id="primary" class="resource-library header-<?php echo $header_activation; ?>">
     <div id="smooth-wrapper">
         <div id="smooth-content">
             <?php 
@@ -54,16 +69,13 @@ if (isset($_GET['filter']) && !empty($_GET['filter'])) {
                 $parent_class = 'resources-libary';
                 $options = Options::getSiteOptions();
                 $pinned_post_ids = (Array)ACF::getField('pinned-posts', $options, []);
-                $conditions = ['' => '-'];
-                foreach (Util::getPostsAsAssociativeArray('conditions') as $key => $value) {
-                    $conditions[$key] = $value;
-                }
+                $conditions = Util::getPostsAsAssociativeArray('conditions');
                 $audiences = array('' => '-');
                 foreach (Util::getPostsAsAssociativeArray('audience') as $key => $value) {
                     $audiences[$key] = $value;
                 }
                 $posts = get_posts([
-                    'post_type' => array('podcast', 'videos', 'blog-post', 'extended-article'), // , drug-fact-sheet 'videos', 'blog-article', 'extended-article', 'drug-fact-sheet'
+                    'post_type' => array('podcast', 'videos', 'blog-post', 'extended-article', 'drug-fact-sheet'), // , 'videos', 'blog-article', 'extended-article', 'drug-fact-sheet'
                     'post_status' => 'publish',
                     'numberposts' => -1,
                     'orderby' => 'modified',
@@ -148,6 +160,7 @@ if (isset($_GET['filter']) && !empty($_GET['filter'])) {
                     echo Util::getToggleControlHtml('videos', 'Videos', $toggle_videos);
                     echo Util::getToggleControlHtml('blog-post', 'Blog Articles', $toggle_blog_articles);
                     echo Util::getToggleControlHtml('extended-article', 'Extended Articles', $toggle_extended_articles);
+                    echo Util::getToggleControlHtml('drug-fact-sheet', 'Drug Fact Sheets', $toggle_drug_fact_sheets);
                     ?>
                 </div>
             </div>

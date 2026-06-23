@@ -3,6 +3,7 @@
 namespace Rosecrance\App\Fields\Options;
 
 use Extended\ACF\Fields\Tab;
+use Extended\ACF\Fields\ButtonGroup;
 use Extended\ACF\Fields\Image;
 
 /**
@@ -26,7 +27,13 @@ class Branding
                     ->placement('left'),
                 Image::make(__('Site Logo', 'rosecrance'), 'site-logo')
                     ->returnFormat('array')
-                    ->previewSize('thumbnail')
+                    ->previewSize('thumbnail'),
+                ButtonGroup::make(__('Header Activation', 'rosecrance'), 'header-activation')
+                    ->choices([
+                        'on' => __('On', 'rosecrance'),
+                        'off'  => __('Off', 'rosecrance')
+                    ])
+                    ->defaultValue('on'),
             ]
         );
     }
