@@ -2,6 +2,10 @@
     padding-top: 110px;
 }
 
+#primary.header-off.programs-and-services {
+  padding-top: 0 !important;
+}
+
 .programs-and-services {
     &__controls {
         padding: 83px 30px 44px 30px;

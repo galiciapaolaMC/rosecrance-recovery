@@ -9,10 +9,16 @@
  * @package Rosecrance
  */
 
+use Rosecrance\App\Fields\ACF;
+use Rosecrance\App\Fields\Options;
+
 get_header();
+
+$options = Options::getSiteOptions();
+$header_activation = ACF::getField('header-activation', $options);
 ?>
 
-<div id="primary">
+<div id="primary" class="header-<?php echo $header_activation; ?>">
     <?php
     // hook: App/Fields/Modules/outputFlexibleModules()
     do_action('rosecrance/modules/output', get_the_ID());

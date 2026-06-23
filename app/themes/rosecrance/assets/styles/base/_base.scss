@@ -65,10 +65,14 @@ h3 {
   }
 }
 
-#primary {
+/* #primary {
   padding-top: 84px;
 
   @media (min-width: $container-large-max-width) {
     padding-top: 160px;
   }
+} */
+
+#primary.header-off {
+  padding-top: 0 !important;
 }

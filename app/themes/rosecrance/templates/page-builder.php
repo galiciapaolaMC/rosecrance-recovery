@@ -9,10 +9,16 @@
  * @package Rosecrance
  */
 
+use Rosecrance\App\Fields\ACF;
+use Rosecrance\App\Fields\Options;
+
 get_header();
+
+$options = Options::getSiteOptions();
+$header_activation = ACF::getField('header-activation', $options);
 ?>
 
-<div id="primary">
+<div id="primary" class="header-<?php echo $header_activation; ?>">
     <div id="smooth-wrapper">
         <div id="smooth-content">
             <?php

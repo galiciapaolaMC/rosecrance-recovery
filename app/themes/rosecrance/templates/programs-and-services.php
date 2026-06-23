@@ -76,9 +76,11 @@ wp_localize_script(
     $regions_related_locations
 );
 
+$options = Options::getSiteOptions();
+$header_activation = ACF::getField('header-activation', $options);
 ?>
 
-<div id="primary" class="programs-and-services">
+<div id="primary" class="programs-and-services header-<?php echo $header_activation; ?>">
     <div id="smooth-wrapper">
         <div id="smooth-content">
             <?php 
@@ -88,10 +90,7 @@ wp_localize_script(
 
             $options = Options::getSiteOptions();
             $pinned_post_ids = (Array)ACF::getField('pinned-posts', $options, []);
-            $conditions = ['' => '-'];
-            foreach (Util::getPostsAsAssociativeArray('conditions') as $key => $value) {
-                $conditions[$key] = $value;
-            }
+            $conditions = Util::getPostsAsAssociativeArray('conditions');
             $audiences = ['' => '-'];
             foreach (Util::getPostsAsAssociativeArray('audience') as $key => $value) {
                 $audiences[$key] = $value;
